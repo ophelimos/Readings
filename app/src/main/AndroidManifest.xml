@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Version Code (VersionScheme-1)(API-2)(A-2)(B-2)(C-2) -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="uk.co.tekkies.readings"
       android:installLocation="auto">
     <supports-screens android:smallScreens="true"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
@@ -14,19 +13,21 @@
         android:label="@string/app_name"
         android:theme="@style/Night"
         android:name="ReadingsApplication">
-        <activity android:name="uk.co.tekkies.readings.activity.ReadingsActivity"
-                  android:label="@string/app_name">
+        <activity android:name="org.sfchristadelphian.readings.activity.ReadingsActivity"
+                  android:label="@string/app_name"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name="uk.co.tekkies.readings.activity.PassageActivity"
-                  android:label="@string/app_name">
+        <activity android:name="org.sfchristadelphian.readings.activity.PassageActivity"
+                  android:label="@string/app_name"
+                  android:exported="true">
              <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="uk.co.tekkies.readings.activity.ReadingsActivity" />
+                android:value="org.sfchristadelphian.readings.activity.ReadingsActivity" />
              <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -34,8 +35,9 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="uk.co.tekkies.readings.activity.SettingsActivity"
-            	android:label="@string/activity_title_settings">
+        <activity android:name="org.sfchristadelphian.readings.activity.SettingsActivity"
+            	android:label="@string/activity_title_settings"
+                android:exported="true">
 		    <intent-filter>
 		       <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
 		       <category android:name="android.intent.category.DEFAULT" />
@@ -43,9 +45,10 @@
 		</activity>
 		
         <activity
-            android:name="uk.co.tekkies.readings.activity.ContentLocationActivity"
+            android:name="org.sfchristadelphian.readings.activity.ContentLocationActivity"
             android:label="@string/mp3_search" 
-   			android:configChanges="orientation|keyboardHidden" >
+   			android:configChanges="orientation|keyboardHidden"
+                        android:exported="true">
 		    <intent-filter>
            		<action android:name=".activity.ContentLocationActivity" />
            		<category android:name="android.intent.category.DEFAULT" />
@@ -53,13 +56,16 @@
         </activity>
 		
         <service
-		    android:name="uk.co.tekkies.readings.service.PlayerService"
+		    android:name="org.sfchristadelphian.readings.service.PlayerService"
 		    android:enabled="true"
 		    android:exported="true" >
 		    <intent-filter>
-		        <action android:name="uk.co.tekkies.readings.service.PlayerService" />
+		        <action android:name="org.sfchristadelphian.readings.service.PlayerService" />
 		    </intent-filter>
 		</service>
      
     </application>
+    <queries>
+        <package android:name="uk.co.tekkies.plugin.kjv" />
+    </queries>
 </manifest>
