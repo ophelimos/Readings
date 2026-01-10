@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/Night"
         android:name="ReadingsApplication">
-        <activity android:name="org.sfchristadelphian.readings.activity.ReadingsActivity"
+        <activity android:name="uk.co.tekkies.readings.activity.ReadingsActivity"
                   android:label="@string/app_name"
                   android:exported="true">
             <intent-filter>
@@ -22,12 +22,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="org.sfchristadelphian.readings.activity.PassageActivity"
+        <activity android:name="uk.co.tekkies.readings.activity.PassageActivity"
                   android:label="@string/app_name"
                   android:exported="true">
              <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.sfchristadelphian.readings.activity.ReadingsActivity" />
+                android:value="uk.co.tekkies.readings.activity.ReadingsActivity" />
              <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="org.sfchristadelphian.readings.activity.SettingsActivity"
+        <activity android:name="uk.co.tekkies.readings.activity.SettingsActivity"
             	android:label="@string/activity_title_settings"
                 android:exported="true">
 		    <intent-filter>
@@ -45,7 +45,7 @@
 		</activity>
 		
         <activity
-            android:name="org.sfchristadelphian.readings.activity.ContentLocationActivity"
+            android:name="uk.co.tekkies.readings.activity.ContentLocationActivity"
             android:label="@string/mp3_search" 
    			android:configChanges="orientation|keyboardHidden"
                         android:exported="true">
@@ -56,11 +56,11 @@
         </activity>
 		
         <service
-		    android:name="org.sfchristadelphian.readings.service.PlayerService"
+		    android:name="uk.co.tekkies.readings.service.PlayerService"
 		    android:enabled="true"
 		    android:exported="true" >
 		    <intent-filter>
-		        <action android:name="org.sfchristadelphian.readings.service.PlayerService" />
+		        <action android:name="uk.co.tekkies.readings.service.PlayerService" />
 		    </intent-filter>
 		</service>
      

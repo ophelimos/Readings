@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "org.sfchristadelphian.readings"
+    namespace = "uk.co.tekkies.readings"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "org.sfchristadelphian.readings"
+        applicationId = "uk.co.tekkies.readings"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
