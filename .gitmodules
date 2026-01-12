@@ -1,6 +1,0 @@
-[submodule "apk"]
-	path = apk
-	url = C:/Users/ajoiner/Dropbox/Version Control/ReadingsApk
-[submodule "app/src/main/assets/private"]
-	path = app/src/main/assets/private
-	url = C:/Users/ajoiner/Dropbox/Version Control/ReadingsPrivateAssets

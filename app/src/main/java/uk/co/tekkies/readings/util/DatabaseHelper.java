@@ -32,6 +32,8 @@ import android.util.Log;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "Readings.db3";
     public static int DB_VERSION = 52;
+    // For testing, set this to True to recreate the DB
+    public static boolean RECREATE_DB = false;
     private final Context context;
 
     public DatabaseHelper(Context context) {
@@ -60,22 +62,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onOpen(SQLiteDatabase db) {
         // Test database integrity, and if it's bad, we drop all tables and start again
-        // final String QUERY = "SELECT name FROM sqlite_schema";
         LinkedList<String> tables = new LinkedList<String>(Arrays.asList("book", "passage", "plan", "summary"));
-        String[] columns = {"name"};
-        Cursor cursor = db.query(false, "sqlite_schema", columns, null, null, null, null, null, null);
-        while (cursor.moveToNext()) {
-            String table = cursor.getString(0);
-            //Log.i("onOpen", "Database contains table: " + table);
-            tables.remove(table);
-        }
-        cursor.close();
-        if ( ! tables.isEmpty() ) {
-            //Log.i("onOpen", "Database is missing tables: " + tables.toString());
+        if ( RECREATE_DB ) {
             for (String table : tables) {
                 db.execSQL("DROP TABLE IF EXISTS " + table);
             }
             onCreate(db);
+            // Only do this once
+            RECREATE_DB = false;
         }
     }
 
