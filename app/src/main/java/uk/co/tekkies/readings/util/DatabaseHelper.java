@@ -54,6 +54,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        recreateDB(db);
+    }
+
+    @Override
     public void onCreate(SQLiteDatabase db) {
         // Version 3.x.x starts at DB version 3
         onUpgrade(db, 3, DB_VERSION);
@@ -61,16 +66,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onOpen(SQLiteDatabase db) {
-        // Test database integrity, and if it's bad, we drop all tables and start again
-        LinkedList<String> tables = new LinkedList<String>(Arrays.asList("book", "passage", "plan", "summary"));
         if ( RECREATE_DB ) {
-            for (String table : tables) {
-                db.execSQL("DROP TABLE IF EXISTS " + table);
-            }
-            onCreate(db);
+            recreateDB(db);
             // Only do this once
             RECREATE_DB = false;
         }
+    }
+
+    public void recreateDB(SQLiteDatabase db) {
+        LinkedList<String> tables = new LinkedList<String>(Arrays.asList("book", "passage", "plan", "summary"));
+        for (String table : tables) {
+            db.execSQL("DROP TABLE IF EXISTS " + table);
+        }
+        onCreate(db);
     }
 
     // TODO: Review exception handling
