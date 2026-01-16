@@ -26,6 +26,10 @@ import uk.co.tekkies.readings.model.Prefs;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.preference.PreferenceManager;
 import androidx.fragment.app.Fragment;
 import android.view.Menu;
@@ -71,8 +75,16 @@ public class DayFragment extends Fragment implements DayView {
 
     @Override
     public View onCreateView(android.view.LayoutInflater inflater, android.view.ViewGroup container,
-            Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.readings_fragment, container, false);
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.readings_fragment, container, false);
+
+        ViewCompat.setOnApplyWindowInsetsListener(view, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
+        return view;
     }
 
     @Override

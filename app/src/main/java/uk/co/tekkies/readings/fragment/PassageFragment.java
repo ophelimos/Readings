@@ -38,6 +38,10 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.preference.PreferenceManager;
 import androidx.fragment.app.Fragment;
 import android.text.Html;
@@ -84,6 +88,12 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
     public View onCreateView(android.view.LayoutInflater inflater, android.view.ViewGroup container,
             Bundle savedInstanceState) {
         View mainView = inflater.inflate(R.layout.passage_fragment, container, false);
+        // Apply insets to the root view of the fragment
+        ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, windowInsets) -> {
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
         textViewContent = (TextView) (mainView.findViewById(R.id.textViewContent));
         defaultTextSize = textViewContent.getTextSize();
         if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(

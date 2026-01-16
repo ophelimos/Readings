@@ -48,14 +48,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        for (int upgrade = oldVersion + 1; upgrade <= newVersion; upgrade++) {
-            applyUpgrade(db, upgrade);
+        try {
+            for (int upgrade = oldVersion + 1; upgrade <= newVersion; upgrade++) {
+                applyUpgrade(db, upgrade);
+            }
+        } catch (android.database.sqlite.SQLiteException exc) {
+            dropDB(db);
+            for (int upgrade = oldVersion + 1; upgrade <= newVersion; upgrade++) {
+                applyUpgrade(db, upgrade);
+            }
         }
     }
 
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        recreateDB(db);
+        dropDB(db);
+        onCreate(db);
     }
 
     @Override
@@ -67,18 +75,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onOpen(SQLiteDatabase db) {
         if ( RECREATE_DB ) {
-            recreateDB(db);
+            dropDB(db);
+            onCreate(db);
             // Only do this once
             RECREATE_DB = false;
         }
     }
 
-    public void recreateDB(SQLiteDatabase db) {
+    public void dropDB(SQLiteDatabase db) {
         LinkedList<String> tables = new LinkedList<String>(Arrays.asList("book", "passage", "plan", "summary"));
         for (String table : tables) {
             db.execSQL("DROP TABLE IF EXISTS " + table);
         }
-        onCreate(db);
     }
 
     // TODO: Review exception handling

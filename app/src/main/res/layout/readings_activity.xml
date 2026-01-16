@@ -2,7 +2,8 @@
     android:id="@+id/fragment_placeholder"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="?readerBackground">
+    android:background="?readerBackground"
+    android:fitsSystemWindows="true">
 
     <androidx.viewpager2.widget.ViewPager2
         xmlns:android="http://schemas.android.com/apk/res/android"
