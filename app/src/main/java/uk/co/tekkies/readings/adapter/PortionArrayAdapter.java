@@ -176,13 +176,12 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
 
     private void askUserToInstallKjvPlugin() {
         AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(readingsActivity);
-        dlgAlert.setMessage(R.string.install_kjv_bible_plugin);
-        dlgAlert.setTitle(R.string.title_install);
-        dlgAlert.setCancelable(true);
+        dlgAlert.setMessage(R.string.no_offline_bible_yet);
+        dlgAlert.setTitle(R.string.title_sorry);
         dlgAlert.setPositiveButton(R.string.ok,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        installKjvPlugin();
+                        dialog.dismiss();
                     }
                 });
         dlgAlert.create().show();
