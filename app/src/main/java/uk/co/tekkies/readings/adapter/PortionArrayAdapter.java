@@ -54,7 +54,7 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
     private ReadingsActivity readingsActivity;
     private ArrayList<Passage> passages;
     Prefs prefs;
-    
+
 
     public PortionArrayAdapter(Activity activity, ArrayList<Passage> values) {
         super(activity, R.layout.listitem_portion, values);
@@ -62,7 +62,7 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
         this.passages = values;
         prefs = new Prefs(activity);
     }
-    
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) readingsActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -107,7 +107,7 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
             openMp3(((View) v.getParent().getParent()).getTag().toString());
         } else if (id == R.id.imageViewReadOnline) {
             Analytics.UIClick(readingsActivity, "passage_read_online");
-            openPositiveWord(((View) v.getParent().getParent()).getTag().toString());
+            openBibleGateway(((View) v.getParent().getParent()).getTag().toString());
         }
     }
 
@@ -173,7 +173,7 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
         }
 
     }
-    
+
     private void askUserToInstallKjvPlugin() {
         AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(readingsActivity);
         dlgAlert.setMessage(R.string.install_kjv_bible_plugin);
@@ -202,14 +202,14 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
         return installed;
     }
 
-    private void openPositiveWord(String passage) {
-        String url = "http://read.thepositiveword.com/index.php?ref=" + Uri.encode(passage);
+    private void openBibleGateway(String passage) {
+        String url = "https://www.biblegateway.com/passage/?version=KJV&search=" + Uri.encode(passage);
         Intent webIntent = new Intent(Intent.ACTION_VIEW);
         Uri uri = Uri.parse(url);
         webIntent.setData(uri);
         readingsActivity.startActivity(webIntent);
     }
-
+    
     private void openIntegratedReader(String selectedPassage) {
         Intent intent = new Intent(readingsActivity, PassageActivity.class);
         ParcelableReadings passableReadings = new ParcelableReadings(passages, selectedPassage, readingsActivity.getSelectedDate());
