@@ -401,7 +401,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     }
 
     protected void doBetaCommunity() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/communities/110884043096085765786")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/AndroidDailyBibleReadings")));
     }
 
     protected void doReportBug() {
