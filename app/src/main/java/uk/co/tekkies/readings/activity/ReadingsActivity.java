@@ -50,8 +50,8 @@ import android.os.Handler;
 import android.os.Message;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -71,7 +71,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     SimpleDateFormat anotherYearDateFormat;
     SimpleDateFormat dayDateFormat;
     PagerAdapter pagerAdapter;
-    ViewPager2 viewPager;
+    ViewPager viewPager;
     Boolean today = true;
     static ReadingsActivity readingsActivity;
     static Boolean toastAttempted=false; //Static so toast won't show if already exists in RAM.
@@ -223,29 +223,19 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     }
 
     private void setupPager() {
-        pagerAdapter = new PagerAdapter(this);
-        viewPager = (ViewPager2) findViewById(R.id.pager);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(pagerAdapter);
         viewPager.setCurrentItem(CENTER_PAGE);
-
-        // Restore the logic that was previously in finishUpdate()
-        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                Calendar calendarPage = pagerAdapter.getSelectedDate(position);
-                today = isToday(calendarPage);
-            }
-        });
     }
 
-    public class PagerAdapter extends FragmentStateAdapter {
-        public PagerAdapter(androidx.fragment.app.FragmentActivity activity) {
-            super(activity);
+    public class PagerAdapter extends FragmentStatePagerAdapter {
+        public PagerAdapter(FragmentManager fragmentManager) {
+            super(fragmentManager);
         }
 
         @Override
-        public androidx.fragment.app.Fragment createFragment(int i) {
+        public androidx.fragment.app.Fragment getItem(int i) {
             DayFragment fragment = new DayFragment();
             Bundle args = new Bundle();
             Calendar fragmentSelectedDate = getSelectedDate(i);
@@ -263,9 +253,46 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
         }
 
         @Override
-        public int getItemCount() {
+        public int getCount() {
             return 200;
         }
+
+         @Override
+         public CharSequence getPageTitle(int position) {
+             Calendar pageCalendar = getSelectedDate(position);
+             int pageDay = pageCalendar.get(Calendar.YEAR) * 1000 + pageCalendar.get(Calendar.DAY_OF_YEAR);
+             Calendar nowCalendar = Calendar.getInstance();
+             int nowDay = nowCalendar.get(Calendar.YEAR) * 1000 + nowCalendar.get(Calendar.DAY_OF_YEAR);
+             String title = "";
+             Date date = new Date(pageCalendar.getTimeInMillis());
+             switch (pageDay - nowDay) {
+             case -1:
+                 title += getResources().getString(R.string.yesterday) + " (" +dayDateFormat.format(date)+")";
+                 break;
+             case 0:
+                 title += getResources().getString(R.string.today) + " (" +dayDateFormat.format(date)+")";
+                 break;
+             case 1:
+                 title += getResources().getString(R.string.tomorrow) + " (" +dayDateFormat.format(date)+")";
+                 break;
+             default: {
+                 if (pageCalendar.get(Calendar.YEAR) == nowCalendar.get(Calendar.YEAR)) {
+                     title += thisYearDateFormat.format(date);
+                 } else {
+                     title += anotherYearDateFormat.format(date);
+                 }
+             }
+             }
+             return title;
+         }
+ 
+         @Override
+         public void finishUpdate(ViewGroup container) {
+             super.finishUpdate(container);
+             Calendar calendarPage = getSelectedDate(viewPager.getCurrentItem());
+             today = isToday(calendarPage);
+         }
+        
 
     }
 

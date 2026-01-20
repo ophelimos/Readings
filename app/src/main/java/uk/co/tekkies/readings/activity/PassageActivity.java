@@ -37,8 +37,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -53,7 +53,7 @@ public class PassageActivity extends BaseActivity implements IPlayerUi {
 	public static final String ARG_PASSAGE_ID = "passageId";
 
     PagerAdapter pagerAdapter;
-    ViewPager2 viewPager;
+    ViewPager viewPager;
     private ParcelableReadings passableReadings;
     private PlayerService.IPlayerService playerService = null;
     private AsyncTask<String, Integer, Long> progressUpdateTask;
@@ -82,21 +82,21 @@ public class PassageActivity extends BaseActivity implements IPlayerUi {
     }
 
     private void setupPager() {
-        pagerAdapter = new PagerAdapter(this);
-        viewPager = (ViewPager2) findViewById(R.id.pager);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(pagerAdapter);
     }
     
-    public class PagerAdapter extends FragmentStateAdapter {
+    public class PagerAdapter extends FragmentStatePagerAdapter {
 		
     	WeakHashMap<Integer, Fragment> fragments=new WeakHashMap<Integer, Fragment>();
 
-		public PagerAdapter(androidx.fragment.app.FragmentActivity activity) {
-            super(activity);
+        public PagerAdapter(FragmentManager fragmentManager) {
+            super(fragmentManager);
         }
             
         @Override
-        public Fragment createFragment(int i) {
+        public Fragment getItem(int i) {
             Fragment fragment = new PassageFragment();
             fragments.put(i, fragment);
             Bundle args = new Bundle();
@@ -108,9 +108,20 @@ public class PassageActivity extends BaseActivity implements IPlayerUi {
         }
 
         @Override
-        public int getItemCount() {
+        public int getCount() {
             return getPassableReadings().passages.size();
         }
+ 
+         @Override
+         public CharSequence getPageTitle(int position) {
+             return getPassableReadings().passages.get(position).getTitle();
+         }
+ 
+         @Override
+         public void finishUpdate(ViewGroup container) {
+             super.finishUpdate(container);
+         }
+        
         
         public Fragment getFragment(int position) {
             return fragments.get(position);
