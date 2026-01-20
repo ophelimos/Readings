@@ -22,8 +22,13 @@
 				android:layout_height="wrap_content"
 				android:text="Note: Anonymous statistics/crash reports can be disabled in settings." />
 
-
-
+            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Version 4.0.0"
+                android:textStyle="bold" />
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="- Update app to API level 34 (Android 14) compatible" />
 
             <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"

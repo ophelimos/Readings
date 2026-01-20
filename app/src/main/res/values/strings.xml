@@ -4,7 +4,7 @@
     <string name="app_name">Readings</string>
     <string name="copyright">Copyright 2013 Andrew Joiner</string>
     <string name="about_app_text">
-\nCopyright 2013 Andrew Joiner
+\nCopyright 2013 Andrew Joiner, some small changes 2025 James Robinson
 \n
 \nLicensed under the Apache License, Version 2.0 (the "License");
 \nyou may not use this file except in compliance with the License.
@@ -50,9 +50,7 @@
     <string name="pref_summary_web_site">Help and feedback</string>
     <string name="about_readings">About Readings</string>
     <string name="about_content_text">
-\n- Reading plan sourced from The Bible Companion reading plan as published by The Christadelphian (http://www.thechristadelphian.com).
-\n                
-\n- Chapter summaries provided by Dean Brown, PsalmOneNineteen.org</string>
+\n- Reading plan sourced from The Bible Companion reading plan as published by The Christadelphian (http://www.thechristadelphian.com).</string>
     <string name="about_content_title">Content</string>
     <string name="about_source_text">App source code available at https://github.com/tekkies/readings</string>
     <string name="about_app_title">App</string>

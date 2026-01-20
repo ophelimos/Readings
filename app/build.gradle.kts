@@ -10,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId = "uk.co.tekkies.readings"
-        minSdk = 24
+        minSdk = 34
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 4
+        versionName = "4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
