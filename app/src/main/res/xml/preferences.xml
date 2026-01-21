@@ -22,7 +22,7 @@
             android:summary="@string/pref_summary_privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="http://tekkies.co.uk/readings-privacy-policy/" />
+                android:data="https://readingsapp.blogspot.com/p/readings-app-privacy-policy.html" />
         </PreferenceScreen>
     
     <PreferenceCategory android:title="@string/pref_title_connect" >
@@ -38,7 +38,7 @@
             android:summary="@string/pref_summary_web_site">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="http://tekkies.co.uk/bible-reading-app/" />
+                android:data="https://readingsapp.blogspot.com" />
         </PreferenceScreen>
     </PreferenceCategory>
 
