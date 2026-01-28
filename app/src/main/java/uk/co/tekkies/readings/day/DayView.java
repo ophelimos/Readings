@@ -1,6 +1,6 @@
-package uk.co.tekkies.readings.day;
+package org.navigatebyfaith.rrreadings.day;
 
-import uk.co.tekkies.readings.model.Passage;
+import org.navigatebyfaith.rrreadings.model.Passage;
 
 public interface DayView {
     void clearList();

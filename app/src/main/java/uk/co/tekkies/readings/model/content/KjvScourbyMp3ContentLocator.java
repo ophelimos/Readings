@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.model.content;
+package org.navigatebyfaith.rrreadings.model.content;
 
 import java.io.File;
 

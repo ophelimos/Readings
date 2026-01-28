@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.notification;
+package org.navigatebyfaith.rrreadings.notification;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -9,12 +9,12 @@ import android.graphics.BitmapFactory;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.activity.PassageActivity;
-import uk.co.tekkies.readings.model.ParcelableReadings;
-import uk.co.tekkies.readings.model.Passage;
-import uk.co.tekkies.readings.service.PlayerService;
-import uk.co.tekkies.readings.service.ReadingsPlayer;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.activity.PassageActivity;
+import org.navigatebyfaith.rrreadings.model.ParcelableReadings;
+import org.navigatebyfaith.rrreadings.model.Passage;
+import org.navigatebyfaith.rrreadings.service.PlayerService;
+import org.navigatebyfaith.rrreadings.service.ReadingsPlayer;
 
 public class PlayerNotificationApi14 implements IPlayerNotification {
     private final Context context;

@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.util;
+package org.navigatebyfaith.rrreadings.util;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import uk.co.tekkies.readings.R;
+import org.navigatebyfaith.rrreadings.R;
 
 public class AppInstaller {
     public static final String MARKET_URL_BASE = "market://details?id=";

@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.service;
+package org.navigatebyfaith.rrreadings.service;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -11,14 +11,14 @@ import android.util.Log;
 
 import java.util.List;
 
-import uk.co.tekkies.readings.activity.PassageActivity;
-import uk.co.tekkies.readings.model.ParcelableReadings;
+import org.navigatebyfaith.rrreadings.activity.PassageActivity;
+import org.navigatebyfaith.rrreadings.model.ParcelableReadings;
 
 public class PlayerService extends Service {
     private static final String INTENT_EXTRA_PASSAGE_ID = "passageId";
     private static final String INTENT_EXTRA_POSITION = "position";
     private static final String LOG_TAG = "PLAYSVC";
-    private static final String SERVICE_NAME = "uk.co.tekkies.readings.service.PlayerService";
+    private static final String SERVICE_NAME = "org.navigatebyfaith.rrreadings.service.PlayerService";
     private final Binder binder = new PlayerServiceBinder();
     ReadingsPlayer readingsPlayer;
 

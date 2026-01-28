@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.test.readingsActivity;
+package org.navigatebyfaith.rrreadings.test.readingsActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,10 +14,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.activity.ReadingsActivity;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.activity.ReadingsActivity;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;

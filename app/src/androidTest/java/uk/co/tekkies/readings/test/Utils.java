@@ -1,13 +1,13 @@
-package uk.co.tekkies.readings.test;
+package org.navigatebyfaith.rrreadings.test;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.preference.PreferenceManager;
 
-import uk.co.tekkies.readings.day.DayFragment;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.day.DayFragment;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 
 public class Utils {
     public static void setSummariesEnabled(Context context, boolean enabled) {

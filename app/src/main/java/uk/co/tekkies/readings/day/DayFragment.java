@@ -14,15 +14,15 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.day;
+package org.navigatebyfaith.rrreadings.day;
 
 import java.util.ArrayList;
 
-import uk.co.tekkies.readings.Injector;
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.adapter.PortionArrayAdapter;
-import uk.co.tekkies.readings.model.Passage;
-import uk.co.tekkies.readings.model.Prefs;
+import org.navigatebyfaith.rrreadings.Injector;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.adapter.PortionArrayAdapter;
+import org.navigatebyfaith.rrreadings.model.Passage;
+import org.navigatebyfaith.rrreadings.model.Prefs;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;

@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.activity;
+package org.navigatebyfaith.rrreadings.activity;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -29,12 +29,12 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.ReadingsApplication;
-import uk.co.tekkies.readings.fragment.DatePickerFragment;
-import uk.co.tekkies.readings.day.DayFragment;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.ReadingsApplication;
+import org.navigatebyfaith.rrreadings.fragment.DatePickerFragment;
+import org.navigatebyfaith.rrreadings.day.DayFragment;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -173,7 +173,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
             String line = reader.readLine();
             //Sanity check message:  e.g. We wouldn't want to toast html from a hotspot paywall
             if(line != null) {
-                if(line.equals("uk.co.tekkies.readings.news-toast")) {
+                if(line.equals("org.navigatebyfaith.rrreadings.news-toast")) {
                     line = reader.readLine();
                     summary = "";
                     while (line != null) {
@@ -382,7 +382,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     }
 
     private void doRate() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=uk.co.tekkies.readings")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.navigatebyfaith.rrreadings")));
     }
 
     @Override

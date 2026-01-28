@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.day;
+package org.navigatebyfaith.rrreadings.day;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.Calendar;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.model.Passage;
-import uk.co.tekkies.readings.util.DatabaseHelper;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.model.Passage;
+import org.navigatebyfaith.rrreadings.util.DatabaseHelper;
 
 public class DayModel1 implements DayModel {
 

@@ -1,1 +1,1 @@
-adb uninstall uk.co.tekkies.readings
+adb uninstall org.navigatebyfaith.rrreadings

@@ -1,7 +1,7 @@
-package uk.co.tekkies.readings.activity;
+package org.navigatebyfaith.rrreadings.activity;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.preference.PreferenceManager;

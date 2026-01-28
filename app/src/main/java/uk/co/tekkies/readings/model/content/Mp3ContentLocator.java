@@ -1,9 +1,9 @@
-package uk.co.tekkies.readings.model.content;
+package org.navigatebyfaith.rrreadings.model.content;
 
 import java.io.File;
 import java.util.ArrayList;
 
-import uk.co.tekkies.readings.model.Prefs;
+import org.navigatebyfaith.rrreadings.model.Prefs;
 import android.content.Context;
 
 public abstract class Mp3ContentLocator {

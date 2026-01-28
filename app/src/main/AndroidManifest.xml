@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/Night"
         android:name="ReadingsApplication">
-        <activity android:name="uk.co.tekkies.readings.activity.ReadingsActivity"
+        <activity android:name="org.navigatebyfaith.rrreadings.activity.ReadingsActivity"
                   android:label="@string/app_name"
                   android:exported="true">
             <intent-filter>
@@ -22,12 +22,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="uk.co.tekkies.readings.activity.PassageActivity"
+        <activity android:name="org.navigatebyfaith.rrreadings.activity.PassageActivity"
                   android:label="@string/app_name"
                   android:exported="true">
              <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="uk.co.tekkies.readings.activity.ReadingsActivity" />
+                android:value="org.navigatebyfaith.rrreadings.activity.ReadingsActivity" />
              <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="uk.co.tekkies.readings.activity.SettingsActivity"
+        <activity android:name="org.navigatebyfaith.rrreadings.activity.SettingsActivity"
             	android:label="@string/activity_title_settings"
                 android:exported="true">
 		    <intent-filter>
@@ -45,7 +45,7 @@
 		</activity>
 		
         <activity
-            android:name="uk.co.tekkies.readings.activity.ContentLocationActivity"
+            android:name="org.navigatebyfaith.rrreadings.activity.ContentLocationActivity"
             android:label="@string/mp3_search" 
    			android:configChanges="orientation|keyboardHidden"
                         android:exported="true">
@@ -56,11 +56,11 @@
         </activity>
 		
         <service
-		    android:name="uk.co.tekkies.readings.service.PlayerService"
+		    android:name="org.navigatebyfaith.rrreadings.service.PlayerService"
 		    android:enabled="true"
 		    android:exported="true" >
 		    <intent-filter>
-		        <action android:name="uk.co.tekkies.readings.service.PlayerService" />
+		        <action android:name="org.navigatebyfaith.rrreadings.service.PlayerService" />
 		    </intent-filter>
 		</service>
      

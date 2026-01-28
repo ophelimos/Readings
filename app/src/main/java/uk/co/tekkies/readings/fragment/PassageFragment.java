@@ -14,21 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.fragment;
+package org.navigatebyfaith.rrreadings.fragment;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.File;
 import java.util.Calendar;
 
-import uk.co.tekkies.readings.Features;
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.ReadingsApplication;
-import uk.co.tekkies.readings.activity.ContentLocationActivity;
-import uk.co.tekkies.readings.activity.PassageActivity;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.model.content.Mp3ContentLocator;
-import uk.co.tekkies.readings.service.PlayerService;
-import uk.co.tekkies.readings.util.Analytics;
-import uk.co.tekkies.readings.util.AppInstaller;
+import org.navigatebyfaith.rrreadings.Features;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.ReadingsApplication;
+import org.navigatebyfaith.rrreadings.activity.ContentLocationActivity;
+import org.navigatebyfaith.rrreadings.activity.PassageActivity;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.model.content.Mp3ContentLocator;
+import org.navigatebyfaith.rrreadings.service.PlayerService;
+import org.navigatebyfaith.rrreadings.util.Analytics;
+import org.navigatebyfaith.rrreadings.util.AppInstaller;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -201,11 +203,25 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
 
     protected String getPassageXml(String passage) {
         String passageXml = "Error";
-        String[] row = new String[] { "passage" };
-        Cursor cursor = getActivity().getContentResolver().query(
-                Uri.parse("content://uk.co.tekkies.plugin.bible.kjv/passage/" + passage), row, "", row, "");
-        if (cursor.moveToFirst()) {
-            passageXml = cursor.getString(cursor.getColumnIndex("passage"));
+        // String[] row = new String[] { "passage" };
+        // Cursor cursor = getActivity().getContentResolver().query(
+        //         Uri.parse("content://uk.co.tekkies.plugin.bible.kjv/passage/" + passage), row, "", row, "");
+        // if (cursor.moveToFirst()) {
+        //     passageXml = cursor.getString(cursor.getColumnIndex("passage"));
+        // }
+        // passageXml = "Genesis 1:1: <w savlm=\"strong:H07225\">In the beginning</w> <w savlm=\"strong:H0430\">God</w> <w  savlm=\"strong:H0853 strong:H01254\">created</w> <w savlm=\"strong:H08064\">the heaven</w> <w savlm=\"strong:H0853\">and</w> <w savlm=\"strong:H0776\">the earth</w>.";
+        // passageXml = "<head><html><meta http-equiv=\"content-type\" content=\"text/html\" charset=\"UTF-8\" lang=\"en\" xml:lang=\"en\"/><style type=\"text/css\"></style></head><body>Genesis 1:1: <span style=\"font:Gentium;\" ><w savlm=\"strong:H07225\">In the beginning</w> <w savlm=\"strong:H0430\">God</w> <w  savlm=\"strong:H0853 strong:H01254\">created</w> <w savlm=\"strong:H08064\">the heaven</w> <w savlm=\"strong:H0853\">and</w> <w savlm=\"strong:H0776\">the earth</w>.</span><br />(KJV)</body></html>";
+        //passageXml = passage + "Genesis 1:1: In the beginning God <i>created</i> the heaven and the earth.";
+        //Path chapterFile = getContext().getAssets().open("KJV/"+passage+".txt");
+        //byte[] encoded = Files.readAllBytes(chapterFile);
+        //passageXml = new String(encoded, StandardCharsets.UTF_8);
+        try {
+            java.io.InputStream inputStream = getContext().getAssets().open("KJV/"+passage);
+            byte[] encoded = inputStream.readAllBytes();
+            passageXml = new String(encoded, UTF_8);
+            inputStream.close();
+        } catch (java.io.IOException e) {
+            Analytics.reportCaughtException(getActivity(), e);
         }
         return passageXml;
     }

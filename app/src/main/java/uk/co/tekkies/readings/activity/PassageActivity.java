@@ -14,17 +14,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.activity;
+package org.navigatebyfaith.rrreadings.activity;
 
 import java.util.WeakHashMap;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.ReadingsApplication;
-import uk.co.tekkies.readings.fragment.PassageFragment;
-import uk.co.tekkies.readings.model.ParcelableReadings;
-import uk.co.tekkies.readings.service.IPlayerUi;
-import uk.co.tekkies.readings.service.PlayerService;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.ReadingsApplication;
+import org.navigatebyfaith.rrreadings.fragment.PassageFragment;
+import org.navigatebyfaith.rrreadings.model.ParcelableReadings;
+import org.navigatebyfaith.rrreadings.service.IPlayerUi;
+import org.navigatebyfaith.rrreadings.service.PlayerService;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -155,22 +155,11 @@ public class PassageActivity extends BaseActivity implements IPlayerUi {
 
     private void showAboutContentDialog() {
         AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
-        dlgAlert.setMessage(getContentNotices());
+        dlgAlert.setMessage("King James Version (1769), derived from the KJV2003 Project text.");
         dlgAlert.setTitle(R.string.about_content);
         dlgAlert.setPositiveButton(R.string.ok, null);
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
-    }
-
-    protected String getContentNotices() {
-        String notices = getString(R.string.unknown);
-        String[] row = new String[] { "version" };
-        Cursor cursor = getContentResolver().query(Uri.parse("content://uk.co.tekkies.plugin.bible.kjv/about"), row,
-                "", row, "");
-        if (cursor.moveToFirst()) {
-            notices = cursor.getString(cursor.getColumnIndex("about"));
-        }
-        return notices;
     }
 
     public void requestViewPagerDisallowInterceptTouchEvent(boolean disallowIntercept) {

@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.test.contentLocationActivity;
+package org.navigatebyfaith.rrreadings.test.contentLocationActivity;
 
 import android.app.Activity;
 import android.app.Instrumentation;
@@ -21,8 +21,8 @@ import org.junit.runner.RunWith;
 
 import java.io.File;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.activity.ContentLocationActivity;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.activity.ContentLocationActivity;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.onView;

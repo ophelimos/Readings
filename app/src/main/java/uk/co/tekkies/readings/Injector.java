@@ -1,11 +1,11 @@
-package uk.co.tekkies.readings;
+package org.navigatebyfaith.rrreadings;
 
-import uk.co.tekkies.readings.day.DayModel;
-import uk.co.tekkies.readings.day.DayModel1;
-import uk.co.tekkies.readings.day.DayPresenter;
-import uk.co.tekkies.readings.day.DayPresenter1;
-import uk.co.tekkies.readings.day.DayView;
-import uk.co.tekkies.readings.day.DayFragment;
+import org.navigatebyfaith.rrreadings.day.DayModel;
+import org.navigatebyfaith.rrreadings.day.DayModel1;
+import org.navigatebyfaith.rrreadings.day.DayPresenter;
+import org.navigatebyfaith.rrreadings.day.DayPresenter1;
+import org.navigatebyfaith.rrreadings.day.DayView;
+import org.navigatebyfaith.rrreadings.day.DayFragment;
 
 public class Injector {
     public static DayPresenter getDayPresenter(DayFragment dayFragment) {

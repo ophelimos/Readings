@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.util;
+package org.navigatebyfaith.rrreadings.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

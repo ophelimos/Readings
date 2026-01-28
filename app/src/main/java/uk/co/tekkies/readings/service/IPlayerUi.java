@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.service;
+package org.navigatebyfaith.rrreadings.service;
 
 public interface IPlayerUi {
     void onPassageChange(int passageId);

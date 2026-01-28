@@ -1,9 +1,9 @@
-package uk.co.tekkies.readings.day;
+package org.navigatebyfaith.rrreadings.day;
 
 import java.util.Calendar;
 
-import uk.co.tekkies.readings.Injector;
-import uk.co.tekkies.readings.model.Passage;
+import org.navigatebyfaith.rrreadings.Injector;
+import org.navigatebyfaith.rrreadings.model.Passage;
 
 /**
  * Created by ajoiner on 03/11/2014.

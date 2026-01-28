@@ -31,7 +31,7 @@
             android:title="@string/pref_title_rate" >
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="http://market.android.com/details?id=uk.co.tekkies.readings" />
+                android:data="http://market.android.com/details?id=org.navigatebyfaith.rrreadings" />
         </PreferenceScreen>
         <PreferenceScreen
             android:title="@string/pref_title_web_site" 

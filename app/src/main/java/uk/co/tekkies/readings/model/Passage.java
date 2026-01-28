@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.model;
+package org.navigatebyfaith.rrreadings.model;
 
 public class Passage {
     private int passageId;

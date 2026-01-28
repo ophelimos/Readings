@@ -14,10 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.activity;
+package org.navigatebyfaith.rrreadings.activity;
 
-import uk.co.tekkies.readings.fragment.SettingsFragment;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.fragment.SettingsFragment;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;

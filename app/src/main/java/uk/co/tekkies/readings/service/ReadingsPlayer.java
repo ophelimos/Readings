@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.service;
+package org.navigatebyfaith.rrreadings.service;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -15,12 +15,12 @@ import java.io.File;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.model.ParcelableReadings;
-import uk.co.tekkies.readings.model.content.Mp3ContentLocator;
-import uk.co.tekkies.readings.notification.IPlayerNotification;
-import uk.co.tekkies.readings.notification.PlayerNotificationApi14;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.model.ParcelableReadings;
+import org.navigatebyfaith.rrreadings.model.content.Mp3ContentLocator;
+import org.navigatebyfaith.rrreadings.notification.IPlayerNotification;
+import org.navigatebyfaith.rrreadings.notification.PlayerNotificationApi14;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 
 public class ReadingsPlayer implements AudioManager.OnAudioFocusChangeListener, MediaPlayer.OnCompletionListener {
     public static final String INTENT_STOP = "stop";

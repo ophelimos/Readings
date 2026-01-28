@@ -1,13 +1,13 @@
-package uk.co.tekkies.readings.test.upgrades.v1140303;
+package org.navigatebyfaith.rrreadings.test.upgrades.v1140303;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import java.util.Calendar;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.test.Utils;
-import uk.co.tekkies.readings.test.readingsActivity.ReadingsActivityTestBase;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.test.Utils;
+import org.navigatebyfaith.rrreadings.test.readingsActivity.ReadingsActivityTestBase;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

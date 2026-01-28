@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.test.readingsActivity;
+package org.navigatebyfaith.rrreadings.test.readingsActivity;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import uk.co.tekkies.readings.R;
+import org.navigatebyfaith.rrreadings.R;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

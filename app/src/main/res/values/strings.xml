@@ -56,8 +56,6 @@
     <string name="about_app_title">App</string>
     <string name="action_day_night">Day/Night</string>
     <string name="title_install">Install</string>
-    <string name="install_kjv_bible_plugin">Install KJV Bible Plugin?</string>
-    <string name="no_offline_bible_yet">The in-app Bible reading feature is currently broken.  For now, please try pressing the globe icon to open the passage in a web browser.</string>
     <string name="title_sorry">Sorry!</string>
     <string name="ok">OK</string>
     <string name="listen">Listen</string>
@@ -68,7 +66,6 @@
     <string name="larger_text">Larger Text</string>
     <string name="smaller_text">Smaller Text</string>
     <string name="you_can_also_pinch_to_zoom">You can also pinch to zoom</string>
-    <string name="please_upgrade_the_kjv_bible_plugin">Please update your KJV Bible plugin for the latest features</string>
     <string name="upgrade_plugin">Update Plugin</string>
     <string name="pref_key_enable_analytics">pref_EnableAnalytics</string>
     <string name="pref_summary_enable_analytics">Please help me improve the app by enabling anonymous statistics reporting</string>

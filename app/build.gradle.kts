@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "uk.co.tekkies.readings"
+    namespace = "org.navigatebyfaith.rrreadings"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "uk.co.tekkies.readings"
+        applicationId = "org.navigatebyfaith.rrreadings"
         minSdk = 34
         targetSdk = 36
         versionCode = 4

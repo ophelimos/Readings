@@ -1,1 +1,1 @@
-adb shell dumpsys package uk.co.tekkies.readings
+adb shell dumpsys package org.navigatebyfaith.rrreadings

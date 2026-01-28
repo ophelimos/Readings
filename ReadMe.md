@@ -1,10 +1,10 @@
-# Daily Bible Readings App (2026 update) #
+# Robert Roberts Readings App (RRReadings) #
 
-This is James Robinsons' fork of Andy Joiner's excellent Readings app (https://github.com/tekkies/Readings) which no longer works properly on newer Android versions.  Currently, it is just a very limited hack to get it working on my personal device (Pixel 5), but Lord willing we'll be able to get it back on the Play Store eventually.
+This is James Robinsons' fork of Andy Joiner's excellent Daily Bible Readings app (https://github.com/tekkies/Readings) which no longer works properly on newer Android versions.
 
 # Plugins #
 
-The app uses a [sister app](https://play.google.com/store/apps/details?id=uk.co.tekkies.plugin.kjv) to provide content.  Although it no longer is on the Google Play store, a manual apk install (from one of the many websites that have copied apks from the play store) does seem to work properly on a Pixel 5.  It does not work properly on newer Android versions though, so it will need to be replaced.
+This fork has disabled the MP3 plugin, and integrated the KJV straight into the app, removing the need for a KJV plugin.
 
 # Build #
 

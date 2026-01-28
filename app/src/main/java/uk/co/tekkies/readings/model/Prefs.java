@@ -1,8 +1,8 @@
-package uk.co.tekkies.readings.model;
+package org.navigatebyfaith.rrreadings.model;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.model.content.Mp3ContentLocator;
-import uk.co.tekkies.readings.util.Analytics;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.model.content.Mp3ContentLocator;
+import org.navigatebyfaith.rrreadings.util.Analytics;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;

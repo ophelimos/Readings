@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.day;
+package org.navigatebyfaith.rrreadings.day;
 
 import java.util.Calendar;
 

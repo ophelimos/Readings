@@ -1,16 +1,16 @@
-package uk.co.tekkies.readings.activity;
+package org.navigatebyfaith.rrreadings.activity;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.adapter.Mp3ContentArrayAdapter;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.model.content.Mp3ContentLocator;
-import uk.co.tekkies.readings.util.Analytics;
-import uk.co.tekkies.readings.util.AppInstaller;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.adapter.Mp3ContentArrayAdapter;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.model.content.Mp3ContentLocator;
+import org.navigatebyfaith.rrreadings.util.Analytics;
+import org.navigatebyfaith.rrreadings.util.AppInstaller;
 
 import android.content.Intent;
 import android.net.Uri;

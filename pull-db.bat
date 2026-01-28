@@ -1,1 +1,1 @@
-adb pull "/data/data/uk.co.tekkies.readings/databases/Readings.db3"
+adb pull "/data/data/org.navigatebyfaith.rrreadings/databases/Readings.db3"

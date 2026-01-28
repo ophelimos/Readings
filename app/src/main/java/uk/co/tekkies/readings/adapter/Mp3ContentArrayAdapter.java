@@ -14,13 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.
  */
 
-package uk.co.tekkies.readings.adapter;
+package org.navigatebyfaith.rrreadings.adapter;
 
 import java.util.ArrayList;
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.activity.ContentLocationActivity;
-import uk.co.tekkies.readings.model.Prefs;
-import uk.co.tekkies.readings.model.content.Mp3ContentLocator;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.activity.ContentLocationActivity;
+import org.navigatebyfaith.rrreadings.model.Prefs;
+import org.navigatebyfaith.rrreadings.model.content.Mp3ContentLocator;
 
 import android.app.Activity;
 import android.content.Context;

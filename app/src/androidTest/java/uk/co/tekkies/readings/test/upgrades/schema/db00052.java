@@ -1,4 +1,4 @@
-package uk.co.tekkies.readings.test.upgrades.schema;
+package org.navigatebyfaith.rrreadings.test.upgrades.schema;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -7,7 +7,7 @@ import org.hamcrest.Matchers;
 
 import java.util.Calendar;
 
-import uk.co.tekkies.readings.test.readingsActivity.ReadingsActivityTestBase;
+import org.navigatebyfaith.rrreadings.test.readingsActivity.ReadingsActivityTestBase;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

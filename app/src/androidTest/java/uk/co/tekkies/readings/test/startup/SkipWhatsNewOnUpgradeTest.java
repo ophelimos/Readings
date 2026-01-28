@@ -1,11 +1,11 @@
-package uk.co.tekkies.readings.test.startup;
+package org.navigatebyfaith.rrreadings.test.startup;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import uk.co.tekkies.readings.R;
-import uk.co.tekkies.readings.activity.ReadingsActivity;
-import uk.co.tekkies.readings.test.Utils;
-import uk.co.tekkies.readings.test.readingsActivity.ReadingsActivityTestBase;
+import org.navigatebyfaith.rrreadings.R;
+import org.navigatebyfaith.rrreadings.activity.ReadingsActivity;
+import org.navigatebyfaith.rrreadings.test.Utils;
+import org.navigatebyfaith.rrreadings.test.readingsActivity.ReadingsActivityTestBase;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
