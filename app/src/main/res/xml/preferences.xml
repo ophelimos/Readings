@@ -9,13 +9,6 @@
             android:summary="@string/pref_summary_show_summary"
             android:defaultValue="true"
              />
-        <CheckBoxPreference
-            android:key="@string/pref_key_enable_analytics"
-            android:summary="@string/pref_summary_enable_analytics"
-            android:title="@string/pref_title_enable_analytics"
-            android:defaultValue="true" 
-            />
-
         </PreferenceCategory>
         <PreferenceScreen
             android:title="@string/pref_title_privacy_policy" 

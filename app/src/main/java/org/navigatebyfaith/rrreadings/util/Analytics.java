@@ -35,11 +35,12 @@ public class Analytics {
     }
 
     private static boolean isEnabled(Context context) {
-        return (new Prefs(context)).loadAnalyticsEnabled();
+        return false;
     }
 
 
     public static void SendEvent(Context context, String category, String action, String label, long value) {
+        // Do nothing - analytics is disabled
     }
 
     public static void UIClick(Context context, String label) {
@@ -54,11 +55,8 @@ public class Analytics {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String value = "(unsupported)";
         value = getPrefValue(key, prefs, value);
-        //Case for enable/disable analytics
-        if(key.equals(context.getString(R.string.pref_key_enable_analytics))) {
-        } else {
-            SendEvent(context, CATEGORY_PREFS, key, value, 0);
-        }
+        // Analytics is never sent to Google anymore
+        SendEvent(context, CATEGORY_PREFS, key, value, 0);
     }
 
     private static String getPrefValue(String key, SharedPreferences prefs, String value) {

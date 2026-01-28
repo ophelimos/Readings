@@ -1,1 +1,0 @@
-adb shell dumpsys package org.navigatebyfaith.rrreadings
