@@ -10,9 +10,9 @@ android {
 
     defaultConfig {
         applicationId = "org.navigatebyfaith.rrreadings"
-        minSdk = 34
+        minSdk = 26
         targetSdk = 36
-        versionCode = 4
+        versionCode = 134040000
         versionName = "4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

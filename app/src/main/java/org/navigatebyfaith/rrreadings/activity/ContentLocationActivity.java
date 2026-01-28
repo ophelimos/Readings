@@ -111,7 +111,7 @@ public class ContentLocationActivity extends BaseActivity implements OnClickList
 
     private void doInstructions() {
         Analytics.UIClick(this, "settings-mp3-help");
-        String url = "http://goo.gl/suiico";
+        String url = "https://www.facebook.com/AndroidDailyBibleReadings";
         Intent webIntent = new Intent(Intent.ACTION_VIEW);
         Uri uri = Uri.parse(url);
         webIntent.setData(uri);

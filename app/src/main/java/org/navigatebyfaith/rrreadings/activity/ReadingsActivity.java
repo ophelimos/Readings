@@ -301,7 +301,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     }
 
     private void doSuggestion() {
-        String url = "http://goo.gl/pSraf";
+        String url = "https://www.facebook.com/AndroidDailyBibleReadings";
         Intent webIntent = new Intent(Intent.ACTION_VIEW);
         Uri uri = Uri.parse(url);
         webIntent.setData(uri);
@@ -330,7 +330,7 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     
     private void doHelp() {
         Analytics.UIClick(getReadingsActivity(), "help");
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://tekkies.co.uk/bible-reading-app/")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/AndroidDailyBibleReadings")));
     }
 
     private void showFeedbackOptions() {
