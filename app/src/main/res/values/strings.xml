@@ -52,7 +52,7 @@
     <string name="about_content_text">
 \n- Reading plan sourced from The Bible Companion reading plan as published by The Christadelphian (http://www.thechristadelphian.com).</string>
     <string name="about_content_title">Content</string>
-    <string name="about_source_text">App source code available at https://github.com/tekkies/readings</string>
+    <string name="about_source_text">App source code available at https://github.com/ophelimos/Readings</string>
     <string name="about_app_title">App</string>
     <string name="action_day_night">Day/Night</string>
     <string name="title_install">Install</string>

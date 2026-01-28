@@ -65,7 +65,4 @@
 		</service>
      
     </application>
-    <queries>
-        <package android:name="uk.co.tekkies.plugin.kjv" />
-    </queries>
 </manifest>

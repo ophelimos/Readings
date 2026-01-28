@@ -60,11 +60,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.Toast;
 
 public class ReadingsActivity extends BaseActivity implements OnDateSetListener {
 
-    static final String NEWS_TOAST_URL = "http://tekkies.co.uk/readings/api/news-toast/";
     private static final int CENTER_PAGE = 100;
     public static Calendar selectedDate = null;
     SimpleDateFormat thisYearDateFormat;
@@ -74,7 +72,6 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
     ViewPager viewPager;
     Boolean today = true;
     static ReadingsActivity readingsActivity;
-    static Boolean toastAttempted=false; //Static so toast won't show if already exists in RAM.
 
     @SuppressLint("SimpleDateFormat") //We don't actually want local formatting.  It's too cluttered.
     @Override
@@ -88,7 +85,6 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
         checkWhatsNew();
         setupPager();
         setDateToDisplay(savedInstanceState);
-        checkToast();
     }
 
     private void checkUpgradeActions() {
@@ -114,41 +110,11 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
         }
     }
 
-    private void checkToast() {
-        if(!toastAttempted){
-            toastAttempted = true;
-            showNewsToast();
-        }
-    }
-
     private void configureDateFormats() {
         dayDateFormat = new SimpleDateFormat("E");
         thisYearDateFormat = new SimpleDateFormat("E d MMM");
         anotherYearDateFormat = new SimpleDateFormat("E d MMM yy");
 
-    }
-
-    private static Handler newsToastHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            Toast.makeText(readingsActivity, msg.obj.toString(), Toast.LENGTH_LONG).show();
-        }
-    };
-
-    private void showNewsToast() {
-        final String versionName = getVersionName();
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String summary = backgroundDownloadNewsToast(versionName);
-                if(summary != null && summary != "") {
-                    Message message = Message.obtain(newsToastHandler, 0, summary);
-                    newsToastHandler.sendMessage(message);
-                }
-            }
-        });
-        thread.setName("Download news toast");
-        thread.start();
     }
 
     private String getVersionName() {
@@ -159,45 +125,6 @@ public class ReadingsActivity extends BaseActivity implements OnDateSetListener 
             Analytics.reportCaughtException(this, e);
         }
         return versionName;
-    }
-
-    private String backgroundDownloadNewsToast(String versionName) {
-        String summary = null;
-        URL url;
-        try {
-            //Append version, so we can easily prompt users to upgrade, if necessary.
-            url = new URL(NEWS_TOAST_URL + "?v=" + versionName);
-            URLConnection connection = url.openConnection();
-            connection.connect();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            String line = reader.readLine();
-            //Sanity check message:  e.g. We wouldn't want to toast html from a hotspot paywall
-            if(line != null) {
-                if(line.equals("org.navigatebyfaith.rrreadings.news-toast")) {
-                    line = reader.readLine();
-                    summary = "";
-                    while (line != null) {
-                        summary += line + "\n";
-                        line = reader.readLine();
-                    }
-                }
-            }
-            reader.close();
-        } catch (UnknownHostException e) {
-            //swallow it
-        } catch (ConnectException e) {
-            //swallow it
-        } catch (SocketException e) {
-            //swallow it
-        } catch (FileNotFoundException e) {
-            //swallow it
-        } catch (SocketTimeoutException e) {
-            //swallow it
-        }
-        catch (Exception e) {
-            Analytics.reportCaughtException(this, e);
-        }
-        return summary;
     }
 
     private void setDate(Calendar calendar) {

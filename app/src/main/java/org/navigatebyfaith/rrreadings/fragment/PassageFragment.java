@@ -203,18 +203,6 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
 
     protected String getPassageXml(String passage) {
         String passageXml = "Error";
-        // String[] row = new String[] { "passage" };
-        // Cursor cursor = getActivity().getContentResolver().query(
-        //         Uri.parse("content://uk.co.tekkies.plugin.bible.kjv/passage/" + passage), row, "", row, "");
-        // if (cursor.moveToFirst()) {
-        //     passageXml = cursor.getString(cursor.getColumnIndex("passage"));
-        // }
-        // passageXml = "Genesis 1:1: <w savlm=\"strong:H07225\">In the beginning</w> <w savlm=\"strong:H0430\">God</w> <w  savlm=\"strong:H0853 strong:H01254\">created</w> <w savlm=\"strong:H08064\">the heaven</w> <w savlm=\"strong:H0853\">and</w> <w savlm=\"strong:H0776\">the earth</w>.";
-        // passageXml = "<head><html><meta http-equiv=\"content-type\" content=\"text/html\" charset=\"UTF-8\" lang=\"en\" xml:lang=\"en\"/><style type=\"text/css\"></style></head><body>Genesis 1:1: <span style=\"font:Gentium;\" ><w savlm=\"strong:H07225\">In the beginning</w> <w savlm=\"strong:H0430\">God</w> <w  savlm=\"strong:H0853 strong:H01254\">created</w> <w savlm=\"strong:H08064\">the heaven</w> <w savlm=\"strong:H0853\">and</w> <w savlm=\"strong:H0776\">the earth</w>.</span><br />(KJV)</body></html>";
-        //passageXml = passage + "Genesis 1:1: In the beginning God <i>created</i> the heaven and the earth.";
-        //Path chapterFile = getContext().getAssets().open("KJV/"+passage+".txt");
-        //byte[] encoded = Files.readAllBytes(chapterFile);
-        //passageXml = new String(encoded, StandardCharsets.UTF_8);
         try {
             java.io.InputStream inputStream = getContext().getAssets().open("KJV/"+passage);
             byte[] encoded = inputStream.readAllBytes();

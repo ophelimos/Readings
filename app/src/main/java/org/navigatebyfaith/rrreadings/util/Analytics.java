@@ -97,7 +97,7 @@ public class Analytics {
             String location="";
             for(int i=0;i<stackTraceElements.length; i++) {
                 StackTraceElement stackTraceElement = stackTraceElements[i];
-                if(stackTraceElement.getClassName().contains("tekkies")) {
+                if(stackTraceElement.getClassName().contains("navigatebyfaith")) {
                     location += stackTraceElement.getFileName().replace(".java","")+":"+stackTraceElement.getLineNumber();
                     break;
                 }
