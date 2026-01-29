@@ -15,7 +15,7 @@
             android:summary="@string/pref_summary_privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://readingsapp.blogspot.com/p/readings-app-privacy-policy.html" />
+                android:data="http://navigatebyfaith.org/rrreadings/privacy_policy.html" />
         </PreferenceScreen>
     
     <PreferenceCategory android:title="@string/pref_title_connect" >

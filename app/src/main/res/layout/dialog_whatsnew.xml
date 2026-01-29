@@ -16,183 +16,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/whatsNewLinearLayout">
+
+            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Version 4.0.1"
+                android:textStyle="bold" />
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="- Remove MySword integration\n
+- Change Privacy Policy link\n
+- At Andy's request, change copyright statement\n
+- Remove pre-4.0.0 What's New" />
             
-
-		<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="Note: Anonymous statistics/crash reports can be disabled in settings." />
-
             <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:text="Version 4.0.0"
                 android:textStyle="bold" />
             <TextView android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="- Update app to API level 34 (Android 14) compatible" />
+                android:text="- Update app to API level 34 (Android 14) compatible\n
+- Include KJV without need for KJV plugin\n
+- Remove analytics\n
+- Remove MP3 support (for now)\n
+- Switch to AI-generated chapter summaries\n
+- Rename app RRReadings, and change logo, etc." />
 
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:text="Version 3.4.8"
-                android:textStyle="bold" />
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Support an alternative version of Scourby KJV MP3 Bible" />
-
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:text="Version 3.4.7"
-                android:textStyle="bold" />
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Fix: Wrong Firefighters MP3 files were playing for some chapters." />
-
-
-
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:text="Version 3.4.6"
-                android:textStyle="bold" />
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- MP3 Settings: You can now browse for MP3 instead of searching the entire device." />
-
-
-
-
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:text="Version 3.4.0"
-                android:textStyle="bold" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:src="@drawable/tap_here_in_future"/>
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Update of summaries
-							\n    - Thanks to Dean Brown, PsalmOneNineteen.org
-							\n- Darker night view
-							\n- Always show day of week on main screen" />
-
-
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-                android:layout_height="wrap_content"
-                android:text="Version 3.3.2"
-                android:textStyle="bold" />
-            <TextView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Full set of short chapter summaries
-							\n    - Thanks to Dean Brown, PsalmOneNineteen.org
-							\n- Study button to link directly to MySword chapter." />
-
-
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-				android:layout_height="wrap_content" android:text="Version 3.2.14"
-				android:textStyle="bold" />
-			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="- Added more passage summaries
-							\n- Bugfix: Missing passages Mar 9-12 (Psalm 119)
-							\n- Alexander Scourby(TM) narration MP3 search update " />
-	
-            
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Version 3.2.8"
-                android:textStyle="bold" />
-
-			<ImageView
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/whats_new_integrated_player"
-			    android:padding = "10dp" />
-			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="- Integrated MP3 player if compatable MP3 files installed
-							\n      - Menu > Settings -> MP3"/>
-
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-				android:layout_height="wrap_content" android:text="Version 3.1.52"
-				android:textStyle="bold" />
-			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="- Anonymous app statistics
-							\n      - Can be disabled from settings" />
-
-			
-            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-				android:layout_height="wrap_content" android:text="Version 3.1.4"
-				android:textStyle="bold" />
-			<ImageView
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/ic_whats_new_icon_change"
-			    android:padding = "10dp" />
-			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="- New icon" />
-			
-						
-			<TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
-				android:layout_height="wrap_content" android:text="Version 3.1.0"
-				android:textStyle="bold" />
-			<ImageView
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/whats_new_swipe_between_readings" 
-			    android:padding = "10dp"/>
-			<TextView android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:text="- Swipe between passages of the day
-							\n- Pinch zoom for passage text size
-							\n- Day/night reading mode" />
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Version 2.7.0"
-                android:textStyle="bold" />
-
-            
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Swipe left/right to go to previous or future dates" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Version 2.6.0"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Ability to turn off chapter summaries 
-        					\n      - See new button at top of screen
-        					\n- Fix Feedback button overlap issue" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Version 2.4.0"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="- Support for chapter summaries, where available
-        					\n- Feedback button at bottom of main screen" />
         </LinearLayout>
     </ScrollView>
 

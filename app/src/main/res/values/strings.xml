@@ -2,9 +2,9 @@
 <resources>
 
     <string name="app_name">RRReadings</string>
-    <string name="copyright">Copyright 2013 Andrew Joiner, 2026 James Robinson</string>
+    <string name="copyright">Copyright 2026 James Robinson. Based on Readings by Andy Joiner, 2013.</string>
     <string name="about_app_text">
-\nCopyright 2013 Andrew Joiner, some small changes 2026 James Robinson
+\nCopyright 2026 James Robinson. Based on Readings by Andy Joiner, 2013.
 \n
 \nLicensed under the Apache License, Version 2.0 (the "License");
 \nyou may not use this file except in compliance with the License.

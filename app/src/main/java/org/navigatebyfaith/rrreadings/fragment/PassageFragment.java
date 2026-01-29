@@ -1,5 +1,5 @@
 /*
-Copyright 2013 Andrew Joiner
+Copyright 2026 James Robinson. Based on Readings by Andy Joiner, 2013.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,7 +18,9 @@ package org.navigatebyfaith.rrreadings.fragment;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import org.navigatebyfaith.rrreadings.Features;
@@ -109,8 +111,8 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
                 || prefs.loadMp3Product().length() > 0) {
             setupMediaControls(mainView);
         }
-        mainView.findViewById(R.id.textViewStudyTop).setOnClickListener(this);
-        mainView.findViewById(R.id.textViewStudyBottom).setOnClickListener(this);
+        // mainView.findViewById(R.id.textViewStudyTop).setOnClickListener(this);
+        // mainView.findViewById(R.id.textViewStudyBottom).setOnClickListener(this);
         if(Features.DAILYREADINGS_ORG_COMMENTS) {
             TextView textViewDiscuss = (TextView) mainView.findViewById(R.id.textViewDiscussTop);
             textViewDiscuss.setOnClickListener(this);
@@ -204,10 +206,18 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
     protected String getPassageXml(String passage) {
         String passageXml = "Error";
         try {
-            java.io.InputStream inputStream = getContext().getAssets().open("KJV/"+passage);
-            byte[] encoded = inputStream.readAllBytes();
-            passageXml = new String(encoded, UTF_8);
-            inputStream.close();
+            // Minimum API is 33 for readAllBytes
+            //java.io.InputStream inputStream = getContext().getAssets().open("KJV/"+passage);
+            //byte[] encoded = inputStream.readAllBytes();
+            StringBuilder stringBuilder = new StringBuilder();
+            BufferedReader fileStream = new BufferedReader(
+                    new InputStreamReader(getContext().getAssets().open("KJV/"+passage)));
+            String line;
+            while ((line = fileStream.readLine()) != null) {
+                stringBuilder.append(line).append('\n');
+            }
+            passageXml = stringBuilder.toString();
+            fileStream.close();
         } catch (java.io.IOException e) {
             Analytics.reportCaughtException(getActivity(), e);
         }
@@ -265,8 +275,8 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
         int id = v.getId();
         if ( id == R.id.button_play_pause) {
             doPlayPauseSearch();
-        } else if ( id == R.id.textViewStudyTop || id == R.id.textViewStudyBottom) {
-            doStudy();
+        // } else if ( id == R.id.textViewStudyTop || id == R.id.textViewStudyBottom) {
+        //     doStudy();
         } else if ( id == R.id.textViewDiscussTop || id == R.id.textViewDiscussBottom) {
         	doDiscuss();
         }
