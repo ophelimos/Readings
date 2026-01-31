@@ -253,6 +253,15 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
             textSize *= detector.getScaleFactor();
+            // max and min textSize values determined empirically
+            double maxTextSize = 3.5;
+            double minTextSize = 0.09;
+            if (textSize > maxTextSize) {
+                textSize = maxTextSize;
+            }
+            if (textSize < minTextSize) {
+                textSize = minTextSize;
+            }
             textViewContent.setTextSize((float) (textSize * defaultTextSize));
             return true;
         }
