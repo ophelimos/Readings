@@ -1,10 +1,422 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array
-        name="feedback">
-        <item>@string/feedback_suggestion</item>
-        <item>@string/feedback_bug</item>
-        <item>@string/feedback_rate</item>
-        <item>@string/feedback_beta</item>
-    </string-array>
+  <string-array
+      name="feedback">
+    <item>@string/feedback_suggestion</item>
+    <item>@string/feedback_bug</item>
+    <item>@string/feedback_rate</item>
+    <item>@string/feedback_beta</item>
+  </string-array>
+  <string-array name="WebVersions">
+    <item>AMU</item>
+    <item>ERV-AR</item>
+    <item>NAV</item>
+    <item>ERV-AWA</item>
+    <item>BG1940</item>
+    <item>BULG</item>
+    <item>ERV-BG</item>
+    <item>CCO</item>
+    <item>APSD-CEB</item>
+    <item>CHR</item>
+    <item>KSS</item>
+    <item>CKW</item>
+    <item>B21</item>
+    <item>SNC</item>
+    <item>BWM</item>
+    <item>LUTH1545</item>
+    <item>SCH1951</item>
+    <item>SCH2000</item>
+    <item>KJ21</item>
+    <item>ASV</item>
+    <item>AMP</item>
+    <item>AMPC</item>
+    <item>BRG</item>
+    <item>CSB</item>
+    <item>CSBA</item>
+    <item>CEB</item>
+    <item>CJB</item>
+    <item>CEV</item>
+    <item>DARBY</item>
+    <item>DLNT</item>
+    <item>DRA</item>
+    <item>ERV</item>
+    <item>EASY</item>
+    <item>EHV</item>
+    <item>ESV</item>
+    <item>ESVUK</item>
+    <item>EXB</item>
+    <item>GNV</item>
+    <item>GW</item>
+    <item>GNT</item>
+    <item>HCSB</item>
+    <item>ICB</item>
+    <item>ISV</item>
+    <item>PHILLIPS</item>
+    <item>JUB</item>
+    <item>KJV</item>
+    <item>AKJV</item>
+    <item>LSB</item>
+    <item>LEB</item>
+    <item>TLB</item>
+    <item>MSG</item>
+    <item>MEV</item>
+    <item>MOUNCE</item>
+    <item>NOG</item>
+    <item>NABRE</item>
+    <item>NASB</item>
+    <item>NASB1995</item>
+    <item>NCB</item>
+    <item>NCV</item>
+    <item>NET</item>
+    <item>NIRV</item>
+    <item>NIV</item>
+    <item>NIVUK</item>
+    <item>NKJV</item>
+    <item>NLV</item>
+    <item>NLT</item>
+    <item>NMB</item>
+    <item>NRSVA</item>
+    <item>NRSVACE</item>
+    <item>NRSVCE</item>
+    <item>NRSVUE</item>
+    <item>NTFE</item>
+    <item>OJB</item>
+    <item>RGT</item>
+    <item>RSV</item>
+    <item>RSVCE</item>
+    <item>TLV</item>
+    <item>VOICE</item>
+    <item>WEB</item>
+    <item>WE</item>
+    <item>WYC</item>
+    <item>YLT</item>
+    <item>LBLA</item>
+    <item>JBS</item>
+    <item>DHH</item>
+    <item>NBLA</item>
+    <item>NBV</item>
+    <item>NTV</item>
+    <item>NVI</item>
+    <item>CST</item>
+    <item>PDT</item>
+    <item>BLP</item>
+    <item>BLPH</item>
+    <item>RVA-2015</item>
+    <item>RVR1960</item>
+    <item>RVR1977</item>
+    <item>RVR1995</item>
+    <item>RVA</item>
+    <item>SRV-BRG</item>
+    <item>TLA</item>
+    <item>R1933</item>
+    <item>BDS</item>
+    <item>LSG</item>
+    <item>NEG1979</item>
+    <item>SG21</item>
+    <item>TR1550</item>
+    <item>WHNU</item>
+    <item>TR1894</item>
+    <item>SBLGNT</item>
+    <item>THGNT</item>
+    <item>HHH</item>
+    <item>WLC</item>
+    <item>ERV-HI</item>
+    <item>SHB</item>
+    <item>HLGN</item>
+    <item>SHP</item>
+    <item>CRO</item>
+    <item>HCV</item>
+    <item>KAR</item>
+    <item>ERV-HU</item>
+    <item>NT-HU</item>
+    <item>AMD</item>
+    <item>ICELAND</item>
+    <item>BDG</item>
+    <item>CEI</item>
+    <item>LND</item>
+    <item>NR1994</item>
+    <item>NR2006</item>
+    <item>JERV</item>
+    <item>JLB</item>
+    <item>JAC</item>
+    <item>KEK</item>
+    <item>KERV</item>
+    <item>KOERV</item>
+    <item>KLB</item>
+    <item>VULGATE</item>
+    <item>MAORI</item>
+    <item>MNT</item>
+    <item>ERV-MR</item>
+    <item>MVC</item>
+    <item>REIMER</item>
+    <item>ERV-NE</item>
+    <item>BB</item>
+    <item>HTB</item>
+    <item>DNB1930</item>
+    <item>LB</item>
+    <item>CCL</item>
+    <item>ERV-OR</item>
+    <item>ERV-PA</item>
+    <item>NP</item>
+    <item>NBTN</item>
+    <item>ARC</item>
+    <item>VFL</item>
+    <item>OL</item>
+    <item>MTDS</item>
+    <item>QUT</item>
+    <item>RMNN</item>
+    <item>NRT</item>
+    <item>ERV-RU</item>
+    <item>RUSV</item>
+    <item>SOM</item>
+    <item>ALB</item>
+    <item>NSP</item>
+    <item>ERV-SR</item>
+    <item>NUB</item>
+    <item>SV1917</item>
+    <item>SFB</item>
+    <item>SFB15</item>
+    <item>SVL</item>
+    <item>TKU</item>
+    <item>SNT</item>
+    <item>ERV-TA</item>
+    <item>TERV</item>
+    <item>NTV-BIBLE</item>
+    <item>ERV-TH</item>
+    <item>TNCV</item>
+    <item>FSV</item>
+    <item>ABTAG1978</item>
+    <item>ABTAG2001</item>
+    <item>ADB1905</item>
+    <item>SND</item>
+    <item>ASND</item>
+    <item>MBBTAG</item>
+    <item>MBBTAG-DC</item>
+    <item>NA-TWI</item>
+    <item>UKR</item>
+    <item>ERV-UK</item>
+    <item>ERV-UR</item>
+    <item>USP</item>
+    <item>NVB</item>
+    <item>BPT</item>
+    <item>CCB</item>
+    <item>CCBT</item>
+    <item>ERV-ZH</item>
+    <item>CNVS</item>
+    <item>CNVT</item>
+    <item>CSBS</item>
+    <item>CSBT</item>
+    <item>CUVS</item>
+    <item>CUV</item>
+    <item>CUVMPS</item>
+    <item>CUVMPT</item>
+    <item>RCU17SS</item>
+    <item>RCU17TS</item>
+  </string-array>
+  <string-array name="WebVersionDescriptions">
+    <item>Amuzgo de Guerrero (AMU)</item>
+    <item>Arabic Bible: Easy-to-Read Version (ERV-AR)</item>
+    <item>Ketab El Hayat (NAV)</item>
+    <item>Awadhi Bible: Easy-to-Read Version (ERV-AWA)</item>
+    <item>1940 Bulgarian Bible (BG1940)</item>
+    <item>Bulgarian Bible (BULG)</item>
+    <item>Bulgarian New Testament: Easy-to-Read Version (ERV-BG)</item>
+    <item>Chinanteco de Comaltepec (CCO)</item>
+    <item>Ang Pulong Sa Dios (APSD-CEB)</item>
+    <item>Cherokee New Testament (CHR)</item>
+    <item>Kurdi Sorani Standard (KSS)</item>
+    <item>Cakchiquel Occidental (CKW)</item>
+    <item>Bible 21 (B21)</item>
+    <item>Slovo na cestu (SNC)</item>
+    <item>Beibl William Morgan (BWM)</item>
+    <item>Luther Bibel 1545 (LUTH1545)</item>
+    <item>Schlachter 1951 (SCH1951)</item>
+    <item>Schlachter 2000 (SCH2000)</item>
+    <item>21st Century King James Version (KJ21)</item>
+    <item>American Standard Version (ASV)</item>
+    <item>Amplified Bible (AMP)</item>
+    <item>Amplified Bible, Classic Edition (AMPC)</item>
+    <item>BRG Bible (BRG)</item>
+    <item>Christian Standard Bible (CSB)</item>
+    <item>Christian Standard Bible Anglicised (CSBA)</item>
+    <item>Common English Bible (CEB)</item>
+    <item>Complete Jewish Bible (CJB)</item>
+    <item>Contemporary English Version (CEV)</item>
+    <item>Darby Translation (DARBY)</item>
+    <item>Disciples Literal New Testament (DLNT)</item>
+    <item>Douay-Rheims 1899 American Edition (DRA)</item>
+    <item>Easy-to-Read Version (ERV)</item>
+    <item>EasyEnglish Bible (EASY)</item>
+    <item>Evangelical Heritage Version (EHV)</item>
+    <item>English Standard Version (ESV)</item>
+    <item>English Standard Version Anglicised (ESVUK)</item>
+    <item>Expanded Bible (EXB)</item>
+    <item>1599 Geneva Bible (GNV)</item>
+    <item>GODS WORD Translation (GW)</item>
+    <item>Good News Translation (GNT)</item>
+    <item>Holman Christian Standard Bible (HCSB)</item>
+    <item>International Childrens Bible (ICB)</item>
+    <item>International Standard Version (ISV)</item>
+    <item>J.B. Phillips New Testament (PHILLIPS)</item>
+    <item>Jubilee Bible 2000 (JUB)</item>
+    <item>King James Version (KJV)</item>
+    <item>Authorized (King James) Version (AKJV)</item>
+    <item>Legacy Standard Bible (LSB)</item>
+    <item>Lexham English Bible (LEB)</item>
+    <item>Living Bible (TLB)</item>
+    <item>The Message (MSG)</item>
+    <item>Modern English Version (MEV)</item>
+    <item>Mounce Reverse Interlinear New Testament (MOUNCE)</item>
+    <item>Names of God Bible (NOG)</item>
+    <item>New American Bible (Revised Edition) (NABRE)</item>
+    <item>New American Standard Bible (NASB)</item>
+    <item>New American Standard Bible 1995 (NASB1995)</item>
+    <item>New Catholic Bible (NCB)</item>
+    <item>New Century Version (NCV)</item>
+    <item>New English Translation (NET)</item>
+    <item>New International Readers Version (NIRV)</item>
+    <item>New International Version (NIV)</item>
+    <item>New International Version - UK (NIVUK)</item>
+    <item>New King James Version (NKJV)</item>
+    <item>New Life Version (NLV)</item>
+    <item>New Living Translation (NLT)</item>
+    <item>New Matthew Bible (NMB)</item>
+    <item>New Revised Standard Version, Anglicised (NRSVA)</item>
+    <item>New Revised Standard Version, Anglicised Catholic Edition (NRSVACE)</item>
+    <item>New Revised Standard Version Catholic Edition (NRSVCE)</item>
+    <item>New Revised Standard Version Updated Edition (NRSVUE)</item>
+    <item>New Testament for Everyone (NTFE)</item>
+    <item>Orthodox Jewish Bible (OJB)</item>
+    <item>Revised Geneva Translation (RGT)</item>
+    <item>Revised Standard Version (RSV)</item>
+    <item>Revised Standard Version Catholic Edition (RSVCE)</item>
+    <item>Tree of Life Version (TLV)</item>
+    <item>The Voice (VOICE)</item>
+    <item>World English Bible (WEB)</item>
+    <item>Worldwide English (New Testament) (WE)</item>
+    <item>Wycliffe Bible (WYC)</item>
+    <item>Youngs Literal Translation (YLT)</item>
+    <item>La Biblia de las Americas (LBLA)</item>
+    <item>Biblia del Jubileo (JBS)</item>
+    <item>Dios Habla Hoy (DHH)</item>
+    <item>Nueva Biblia de las Americas (NBLA)</item>
+    <item>Nueva Biblia Viva (NBV)</item>
+    <item>Nueva Traduccion Viviente (NTV)</item>
+    <item>Nueva Version Internacional (NVI)</item>
+    <item>Nueva Version Internacional (Castilian) (CST)</item>
+    <item>Palabra de Dios para Todos (PDT)</item>
+    <item>La Palabra (Espana) (BLP)</item>
+    <item>La Palabra (Hispanoamerica) (BLPH)</item>
+    <item>Reina Valera Actualizada (RVA-2015)</item>
+    <item>Reina-Valera 1960 (RVR1960)</item>
+    <item>Reina Valera Revisada (RVR1977)</item>
+    <item>Reina-Valera 1995 (RVR1995)</item>
+    <item>Reina-Valera Antigua (RVA)</item>
+    <item>Spanish Blue Red and Gold Letter Edition (SRV-BRG)</item>
+    <item>Traduccion en lenguaje actual (TLA)</item>
+    <item>Raamattu 1933/38 (R1933)</item>
+    <item>La Bible du Semeur (BDS)</item>
+    <item>Louis Segond (LSG)</item>
+    <item>Nouvelle Edition de Geneve - NEG1979 (NEG1979)</item>
+    <item>Segond 21 (SG21)</item>
+    <item>1550 Stephanus New Testament (TR1550)</item>
+    <item>1881 Westcott-Hort New Testament (WHNU)</item>
+    <item>1894 Scrivener New Testament (TR1894)</item>
+    <item>SBL Greek New Testament (SBLGNT)</item>
+    <item>Tyndale House Greek New Testament (THGNT)</item>
+    <item>Habrit Hakhadasha/Haderekh (HHH)</item>
+    <item>The Westminster Leningrad Codex (WLC)</item>
+    <item>Hindi Bible: Easy-to-Read Version (ERV-HI)</item>
+    <item>Saral Hindi Bible (SHB)</item>
+    <item>Ang Pulong Sang Dios (HLGN)</item>
+    <item>Biblija: suvremeni hrvatski prijevod (SHP)</item>
+    <item>Knijga O Kristu (CRO)</item>
+    <item>Haitian Creole Version (HCV)</item>
+    <item>Hungarian Karoli (KAR)</item>
+    <item>Hungarian Bible: Easy-to-Read Version (ERV-HU)</item>
+    <item>Hungarian New Translation (NT-HU)</item>
+    <item>Alkitab Mudah Dibaca (AMD)</item>
+    <item>Icelandic Bible (ICELAND)</item>
+    <item>La Bibbia della Gioia (BDG)</item>
+    <item>Conferenza Episcopale Italiana (CEI)</item>
+    <item>La Nuova Diodati (LND)</item>
+    <item>Nuova Riveduta 1994 (NR1994)</item>
+    <item>Nuova Riveduta 2006 (NR2006)</item>
+    <item>Japanese Bible: Easy-to-Read Version (JERV)</item>
+    <item>Japanese Living Bible (JLB)</item>
+    <item>Jacalteco, Oriental (JAC)</item>
+    <item>Kekchi (KEK)</item>
+    <item>Kannada Holy Bible: Easy-to-Read Version (KERV)</item>
+    <item>Korean Bible: Easy-to-Read Version (KOERV)</item>
+    <item>Korean Living Bible (KLB)</item>
+    <item>Biblia Sacra Vulgata (VULGATE)</item>
+    <item>Maori Bible (MAORI)</item>
+    <item>Macedonian New Testament (MNT)</item>
+    <item>Marathi Bible: Easy-to-Read Version (ERV-MR)</item>
+    <item>Mam, Central (MVC)</item>
+    <item>Reimer 2001 (REIMER)</item>
+    <item>Nepali Bible: Easy-to-Read Version (ERV-NE)</item>
+    <item>BasisBijbel (BB)</item>
+    <item>Het Boek (HTB)</item>
+    <item>Det Norsk Bibelselskap 1930 (DNB1930)</item>
+    <item>En Levende Bok (LB)</item>
+    <item>Mawu a Mulungu mu Chichewa Chalero (CCL)</item>
+    <item>Odia Holy Bible: Easy-to-Read Version (ERV-OR)</item>
+    <item>Punjabi Bible: Easy-to-Read Version (ERV-PA)</item>
+    <item>Nowe Przymierze (NP)</item>
+    <item>Ne Bibliaj Tik Nawat (NBTN)</item>
+    <item>Almeida Revista e Corrigida 2009 (ARC)</item>
+    <item>Portuguese New Testament: Easy-to-Read Version (VFL)</item>
+    <item>O Livro (OL)</item>
+    <item>Mushuj Testamento Diospaj Shimi (MTDS)</item>
+    <item>Quiche, Centro Occidental (QUT)</item>
+    <item>Cornilescu 1924 - Revised 2010, 2014 (RMNN)</item>
+    <item>New Russian Translation (NRT)</item>
+    <item>Russian New Testament: Easy-to-Read Version (ERV-RU)</item>
+    <item>Russian Synodal Version (RUSV)</item>
+    <item>Somali Bible (SOM)</item>
+    <item>Albanian Bible (ALB)</item>
+    <item>New Serbian Translation (NSP)</item>
+    <item>Serbian New Testament: Easy-to-Read Version (ERV-SR)</item>
+    <item>nuBibeln (Swedish Contemporary Bible) (NUB)</item>
+    <item>Svenska 1917 (SV1917)</item>
+    <item>Svenska Folkbibeln (SFB)</item>
+    <item>Svenska Folkbibeln 2015 (SFB15)</item>
+    <item>Swedish New Living Bible (Nya Levande Bibeln) (SVL)</item>
+    <item>Agano Jipya: Tafsiri ya Kusoma-Kwa-Urahisi (TKU)</item>
+    <item>Neno: Bibilia Takatifu (SNT)</item>
+    <item>Tamil Bible: Easy-to-Read Version (ERV-TA)</item>
+    <item>Telugu Holy Bible: Easy-to-Read Version (TERV)</item>
+    <item>New Thai Version (NTV-BIBLE)</item>
+    <item>Thai New Testament: Easy-to-Read Version (ERV-TH)</item>
+    <item>Thai New Contemporary Bible (TNCV)</item>
+    <item>Ang Bagong Tipan: Filipino Standard Version (FSV)</item>
+    <item>Ang Biblia (1978) (ABTAG1978)</item>
+    <item>Ang Biblia, 2001 (ABTAG2001)</item>
+    <item>Ang Dating Biblia (1905) (ADB1905)</item>
+    <item>Ang Salita ng Diyos (SND)</item>
+    <item>Ang Salita ng Dios (Tagalog Contemporary Bible) (ASND)</item>
+    <item>Magandang Balita Biblia (MBBTAG)</item>
+    <item>Magandang Balita Biblia (with Deuterocanon) (MBBTAG-DC)</item>
+    <item>Nkwa Asem (NA-TWI)</item>
+    <item>Ukrainian Bible (UKR)</item>
+    <item>Ukrainian Bible: Easy-to-Read Version (ERV-UK)</item>
+    <item>Urdu Bible: Easy-to-Read Version (ERV-UR)</item>
+    <item>Uspanteco (USP)</item>
+    <item>New Vietnamese Bible (NVB)</item>
+    <item>Vietnamese Bible: Easy-to-Read Version (BPT)</item>
+    <item>Chinese Contemporary Bible (Simplified) (CCB)</item>
+    <item>Chinese Contemporary Bible (Traditional) (CCBT)</item>
+    <item>Chinese New Testament: Easy-to-Read Version (ERV-ZH)</item>
+    <item>Chinese New Version (Simplified) (CNVS)</item>
+    <item>Chinese New Version (Traditional) (CNVT)</item>
+    <item>Chinese Standard Bible (Simplified) (CSBS)</item>
+    <item>Chinese Standard Bible (Traditional) (CSBT)</item>
+    <item>Chinese Union Version (Simplified) (CUVS)</item>
+    <item>Chinese Union Version (Traditional) (CUV)</item>
+    <item>Chinese Union Version Modern Punctuation (Simplified) (CUVMPS)</item>
+    <item>Chinese Union Version Modern Punctuation (Traditional) (CUVMPT)</item>
+    <item>Revised Chinese Union Version (Simplified Script) Shen Edition (RCU17SS)</item>
+    <item>Revised Chinese Union Version (Traditional Script) Shen Edition (RCU17TS)</item>
+  </string-array>
 </resources>

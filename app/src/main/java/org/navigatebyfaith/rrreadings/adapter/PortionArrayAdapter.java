@@ -133,7 +133,9 @@ public class PortionArrayAdapter extends ArrayAdapter<Passage> implements OnClic
     }
 
     private void openBibleGateway(String passage) {
-        String url = "https://www.biblegateway.com/passage/?version=KJV&search=" + Uri.encode(passage);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(readingsActivity);
+        String bibleVersion = settings.getString(Prefs.PREF_WEB_BIBLE_VERSION, "KJV");
+        String url = "https://www.biblegateway.com/passage/?version="+bibleVersion+"&search=" + Uri.encode(passage);
         Intent webIntent = new Intent(Intent.ACTION_VIEW);
         Uri uri = Uri.parse(url);
         webIntent.setData(uri);

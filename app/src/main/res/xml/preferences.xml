@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <PreferenceCategory android:title="@string/pref_title_general" >
-        
-        <CheckBoxPreference
-            android:key="@string/pref_key_show_summary"
-            android:title="@string/pref_title_show_summary"
-            android:summary="@string/pref_summary_show_summary"
-            android:defaultValue="true"
-             />
-        </PreferenceCategory>
-        <PreferenceScreen
-            android:title="@string/pref_title_privacy_policy" 
-            android:summary="@string/pref_summary_privacy_policy">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://navigatebyfaith.org/rrreadings/privacy_policy.html" />
-        </PreferenceScreen>
+  <PreferenceCategory android:title="@string/pref_title_general" >
     
-    <PreferenceCategory android:title="@string/pref_title_connect" >
-        <PreferenceScreen
-            android:summary="@string/pref_summary_rate"
-            android:title="@string/pref_title_rate" >
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://market.android.com/details?id=org.navigatebyfaith.rrreadings" />
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:title="@string/pref_title_web_site" 
-            android:summary="@string/pref_summary_web_site">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://readingsapp.blogspot.com" />
-        </PreferenceScreen>
-    </PreferenceCategory>
+    <CheckBoxPreference
+        android:key="@string/pref_key_show_summary"
+        android:title="@string/pref_title_show_summary"
+        android:summary="@string/pref_summary_show_summary"
+        android:defaultValue="true"
+        />
+    <ListPreference
+        android:key="@string/pref_key_web_bible_version"
+        android:title="@string/pref_title_web_bible_version"
+        android:summary="@string/pref_summary_web_bible_version"
+        android:entries="@array/WebVersionDescriptions"
+        android:entryValues="@array/WebVersions"
+        android:defaultValue="KJV"
+        />
+  </PreferenceCategory>        
+  <PreferenceScreen
+      android:title="@string/pref_title_privacy_policy" 
+      android:summary="@string/pref_summary_privacy_policy">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:data="http://navigatebyfaith.org/rrreadings/privacy_policy.html" />
+  </PreferenceScreen>
+  
+  <PreferenceCategory android:title="@string/pref_title_connect" >
+    <PreferenceScreen
+        android:summary="@string/pref_summary_rate"
+        android:title="@string/pref_title_rate" >
+      <intent
+          android:action="android.intent.action.VIEW"
+          android:data="http://market.android.com/details?id=org.navigatebyfaith.rrreadings" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/pref_title_web_site" 
+        android:summary="@string/pref_summary_web_site">
+      <intent
+          android:action="android.intent.action.VIEW"
+          android:data="https://readingsapp.blogspot.com" />
+    </PreferenceScreen>
+  </PreferenceCategory>
 
-    
+  
 </PreferenceScreen>
