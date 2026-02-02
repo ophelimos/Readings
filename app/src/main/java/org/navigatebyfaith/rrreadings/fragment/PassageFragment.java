@@ -99,6 +99,7 @@ public class PassageFragment extends Fragment implements OnSharedPreferenceChang
             return windowInsets;
         });
         textViewContent = (TextView) (mainView.findViewById(R.id.textViewContent));
+        textViewContent.setTextIsSelectable(true);
         defaultTextSize = textViewContent.getTextSize();
         if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean(
                 getString(R.string.pref_key_night_mode), false)) {
