@@ -39,8 +39,6 @@ for (my $ii = 0; $ii < @books; $ii++) {
             $verse =~ s/<span[^>]*>//g;
             # Remove the book and chapter, replace with <sup>
             $verse =~ s|^[^:]+\d+:(\d+): |<sup><b>$1</b></sup> |;
-            # Escape quotes
-            $verse =~ s/"/\\"/g;
         }
         open my $OUTPUT, '>', "$directory/$book $chapter";
         foreach my $verse (@verses) {
