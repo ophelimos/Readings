@@ -2,6 +2,8 @@
 
 This is James Robinsons' fork of Andy Joiner's excellent Daily Bible Readings app (https://github.com/tekkies/Readings) which no longer works properly on newer Android versions.
 
+The easiest way to get RRReadings on your device is to download it from Google Play at https://play.google.com/store/apps/details?id=org.navigatebyfaith.rrreadings
+
 # Plugins #
 
 This fork has disabled the MP3 plugin, and integrated the KJV straight into the app, removing the need for a KJV plugin.
