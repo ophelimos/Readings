@@ -28,7 +28,7 @@ while (<$BOOK2CHAPTERS>) {
 close $BOOK2CHAPTERS;
 
 # TESTING
-# my @verses = split /\n/, `$command -k Psalms 119`;
+# my @verses = split /\n/, `$command -k Psalms 87`;
 # clean_verses(\@verses, "Psalms");
 # foreach my $verse (@verses) {
 #     print $verse."\n";
@@ -104,10 +104,10 @@ sub clean_verses {
         }
         # Psalm titles to small
         if ( $first ) {
-            $verse =~ s|<title[^>]*>([^<]+)</title>|<small>$1</small><br />|g;
+            $verse =~ s|<title[^>]*>(.+)</title>|<small>$1</small><br />|g;
             $first = 0;
         } else {
-            $verse =~ s|<title[^>]*>([^<]+)</title>||g;
+            $verse =~ s|<title[^>]*>(.+)</title>||g;
         }
         # Remove the book and chapter, replace with <sup>
         # Except diatheke uses roman numerals...

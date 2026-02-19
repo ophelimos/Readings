@@ -12,8 +12,8 @@ android {
         applicationId = "org.navigatebyfaith.rrreadings"
         minSdk = 26
         targetSdk = 36
-        versionCode = 134040102
-        versionName = "4.1.2"
+        versionCode = 134040201
+        versionName = "4.2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

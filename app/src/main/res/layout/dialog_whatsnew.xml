@@ -19,6 +19,24 @@
 
             <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
+                android:text="Version 4.2.1"
+                android:textStyle="bold" />
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" - Fix psalms with italics in their titles" />
+
+            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Version 4.2.0"
+                android:textStyle="bold" />
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" - Put tetragrammaton in ALL CAPS\n
+- Show Psalm titles\n
+- Fix display of Psalm 119" />
+
+            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:text="Version 4.1.2"
                 android:textStyle="bold" />
             <TextView android:layout_width="fill_parent"
