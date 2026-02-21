@@ -18,12 +18,45 @@ package org.navigatebyfaith.rrreadings.fragment;
 
 import org.navigatebyfaith.rrreadings.R;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.preference.PreferenceFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SettingsFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.preferences);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Apply window insets to the RecyclerView to support edge-to-edge display
+        final RecyclerView listView = getListView();
+        if (listView != null) {
+            ViewCompat.setOnApplyWindowInsetsListener(listView, (v, windowInsets) -> {
+                Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(
+                        insets.left,
+                        insets.top,
+                        insets.right,
+                        insets.bottom
+                );
+
+                return windowInsets;
+            });
+        }
+    }
+
+    @Override
+    public void onCreatePreferences(@Nullable Bundle savedInstanceState, String rootKey) {
+        setPreferencesFromResource(R.xml.preferences, rootKey);
     }
 }

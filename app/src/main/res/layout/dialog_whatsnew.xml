@@ -19,6 +19,14 @@
 
             <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
+                android:text="Version 4.2.2"
+                android:textStyle="bold" />
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" - Fix settings menu visibility on newer devices" />
+
+            <TextView android:layout_width="fill_parent" android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:text="Version 4.2.1"
                 android:textStyle="bold" />
             <TextView android:layout_width="fill_parent"
