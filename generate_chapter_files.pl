@@ -114,6 +114,8 @@ sub clean_verses {
         $book =~ s/^3/III/;
         $book =~ s/^2/II/;
         $book =~ s/^1/I/;
+        # And "Revelation" becomes "Revelation of John"
+        $book =~ s/^Revelation$/Revelation of John/;
         $verse =~ s|$book \d+:(\d+): |<sup><b>$1</b></sup> |;
     }
 }
